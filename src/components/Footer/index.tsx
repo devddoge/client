@@ -25,7 +25,7 @@ export default function Footer() {
         <Link>
           <img src={Rd} alt="fb" />
         </Link>
-        <Link>
+        <Link href="https://twitter.com/DDoge_Coin" target="_blank">
           <img src={Tw} alt="fb" />
         </Link>
         <Link>

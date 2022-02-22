@@ -16,6 +16,7 @@ import LogoWithText from '../../assets/images/logo-with-text.png'
 import { ThemedText } from '../../theme'
 import ClaimModal from '../claim/ClaimModal'
 import { CardNoise } from '../earn/styled'
+import Menu from '../Menu'
 import { Dots } from '../swap/styleds'
 import Web3Status from '../Web3Status'
 import HolidayOrnament from './HolidayOrnament'
@@ -44,12 +45,12 @@ const HeaderFrame = styled.div<{ showBackground: boolean }>`
   background-blend-mode: hard-light;
 
   ${({ theme }) => theme.mediaWidth.upToLarge`
-    grid-template-columns: 48px 1fr 1fr;
+    grid-template-columns: 234px 1fr;
   `};
 
   ${({ theme }) => theme.mediaWidth.upToMedium`
     padding:  1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 234px 1fr;
   `};
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
@@ -211,9 +212,9 @@ export default function Header() {
             <Web3Status />
           </AccountElement>
         </HeaderElement>
-        {/* <HeaderElement>
+        <HeaderElement>
           <Menu />
-        </HeaderElement> */}
+        </HeaderElement>
       </HeaderControls>
     </HeaderFrame>
   )
