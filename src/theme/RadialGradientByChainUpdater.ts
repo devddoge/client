@@ -9,12 +9,14 @@ const initialStyles = {
   height: '200vh',
   transform: 'translate(-50vw, -100vh)',
   backgroundBlendMode: '',
+  background: 'red',
 }
 const backgroundResetStyles = {
   width: '100vw',
   height: '100vh',
   transform: 'unset',
   backgroundBlendMode: '',
+  background: 'red',
 }
 
 type TargetBackgroundStyles = typeof initialStyles | typeof backgroundResetStyles
@@ -62,7 +64,7 @@ export default function RadialGradientByChainUpdater(): null {
         break
       default:
         setBackground(initialStyles)
-        backgroundRadialGradientElement.style.background = ''
+        backgroundRadialGradientElement.style.background = '#F2EEE1'
     }
   }, [darkMode, chainId])
   return null

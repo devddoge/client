@@ -7,6 +7,7 @@ import styled from 'styled-components/macro'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
 import AddressClaimModal from '../components/claim/AddressClaimModal'
 import ErrorBoundary from '../components/ErrorBoundary'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Polling from '../components/Header/Polling'
 import Popups from '../components/Popups'
@@ -36,6 +37,7 @@ const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+  min-height: calc(100vh);
 `
 
 const BodyWrapper = styled.div`
@@ -136,6 +138,7 @@ export default function App() {
             </Suspense>
             <Marginer />
           </BodyWrapper>
+          <Footer />
         </AppWrapper>
       </Web3ReactManager>
     </ErrorBoundary>

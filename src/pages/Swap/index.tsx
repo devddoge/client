@@ -3,6 +3,7 @@ import { Trade } from '@uniswap/router-sdk'
 import { Currency, CurrencyAmount, Token, TradeType } from '@uniswap/sdk-core'
 import { Trade as V2Trade } from '@uniswap/v2-sdk'
 import { Trade as V3Trade } from '@uniswap/v3-sdk'
+import LogoSwap from 'assets/images/logo-swap.png'
 import { NetworkAlert } from 'components/NetworkAlert/NetworkAlert'
 import SwapDetailsDropdown from 'components/swap/SwapDetailsDropdown'
 import UnsupportedCurrencyFooter from 'components/swap/UnsupportedCurrencyFooter'
@@ -59,6 +60,17 @@ import AppBody from '../AppBody'
 const AlertWrapper = styled.div`
   max-width: 460px;
   width: 100%;
+`
+
+const DogeMeme = styled.img`
+  position: fixed;
+  bottom: 110px;
+  right: 7%;
+`
+
+const LogoWithText = styled.img`
+  margin-bottom: 14px;
+  margin-top: 42px;
 `
 
 export default function Swap({ history }: RouteComponentProps) {
@@ -384,6 +396,7 @@ export default function Swap({ history }: RouteComponentProps) {
         onConfirm={handleConfirmTokenWarning}
         onDismiss={handleDismissTokenWarning}
       />
+      <LogoWithText src={LogoSwap} alt="swap" />
       <AppBody>
         <SwapHeader allowedSlippage={allowedSlippage} />
         <Wrapper id="swap-page">
@@ -631,6 +644,7 @@ export default function Swap({ history }: RouteComponentProps) {
           currencies={[currencies[Field.INPUT], currencies[Field.OUTPUT]]}
         />
       )}
+      <DogeMeme src="/images/doge-meme.png" alt="doge-meme" />
     </>
   )
 }
